@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cadastro do Pet</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="\logo.svg" alt="logo" width="100px" height="100px">
+        </div>
+        <ul class="nav-links">
+            <li><a href="\home.html"> <img src="\img/home.svg"> Home</a></li>
+            <li><a href="dogs.html"> <img src="\img/dogs.svg"> Dogs</a></li>
+            <li><a href="relatorios.html"> <img src="\img/relatorios.svg"> Relatórios</a></li>
+            <li><a href="financeiro.html"> <img src="\img/financeiro.svg"> Financeiro</a></li>
+            <li><a href="configuracoes.html"> <img src="\img/configuracoes.svg"> Configurações</a></li>
+            <li class="sair"><a href="login.html"> <img src="\img/sair.svg"> Sair</a></li>
+        </ul>
+    </nav>
+        <div class="form">
+            <form action="#">
+                <div class="link-cadastro">
+                    <a href="\home.html" class="voltar">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+                            <g id="&#240;&#159;&#166;&#134; icon &#34;arrow left&#34;">
+                            <path id="Vector" d="M26 14H2" stroke="#003153" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_2" d="M14 26L2 14L14 2" stroke="#003153" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="link">
+                        <h3>Cadastro</h3>
+                    </div>
+                </div>
+
+                <div class="form-header">
+                    <h2>Informações sobre o doguinho</h2>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="name" placeholder="Nome do dog" required> 
+                        </div>
+                    </div>
+                    
+                    <div class="input-group2">
+                        <div class="input-box">
+                            <label for="raça">Raça</label>
+                            <input type="text" name="raça" placeholder="Raça do dog" required>
+                        </div>
+                        <div class="input-box">
+                            <label>Sexo</label>
+                            <select id="sexo" required>
+                                <option selected disabled value="">Selecione</option>
+                                <option>Macho</option>
+                                <option>Fêmea</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="input-group3">
+                        <div class="input-box">
+                            <label>Idade</label>
+                            <input type="text" name="idade" placeholder="Idade do dog">
+                        </div>
+                        <div class="input-box">
+                            <label for="peso">Peso</label>
+                            <input type="text" name="peso" placeholder="Peso do dog" required>
+                        </div>
+                        <div class="input-box">
+                            <label>Castrado</label>
+                            <select id="castrado" required>
+                                <option selected disabled value="">Selecione</option>
+                                <option>Sim</option>
+                                <option>Não</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group4">
+                        <div class="input-box">
+                            <label>Data de nascimento</label>
+                            <input type="date" name="nascimento" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="cor"><strong>Cor</strong></label>
+                            <input type="text" name="cor" id="cor" placeholder="Cor do dog" required>
+                        </div>
+                        <div class="input-box">
+                            <label>Porte</label>
+                            <select id="porte" required>
+                                <option selected disabled value="">Selecione</option>
+                                <option>Pequeno</option>
+                                <option>Médio</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+                <div class="continuar-button top-right">
+                    <button><a href="./page-2/page2.html">Continuar</a></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>

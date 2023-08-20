@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15rem 1fr; /* Duas colunas: 15rem para a barra de navegação e 1fr para o conteúdo principal */
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+nav ul li {
+    margin-left: 26px;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+nav ul li img {
+    margin-right: 10px;
+    max-width: 30px;
+}
+
+nav .logo {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: #086AAC;
+}
+
+.nav-bar,
+nav ul li {
+    background-color: #086AAC;
+    font-size: 1.2rem;
+}
+
+.sair {
+    margin-top: 9rem;
+}
+
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+}
+
+#pesquisa-dog{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+}
+
+.container-funcionalidades{
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.caixa-funcionalidade{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+p{
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.caixa-item {
+    margin-top: 10px;
+    width: 100%;
+    flex: 1; 
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(231, 125, 53, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center; 
+    margin-right: 10px;
+    border: none; 
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.caixa-item a{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa-item a img{
+    margin-bottom: 10px;
+}
+
+.container-dogs{
+    margin-top: 15px;
+}
+
+.dog-dia{
+    margin-top: 10px;
+    border: none;
+    background-color: #F5F5F5;
+    margin-left: 15px;
+}
+
+.dog-dia a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dog-dia img{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.arquivos{
+    margin-top: 10px;
+    width: 250px;
+    height: 80px;
+    background-color: #F5F5F5;
+    margin-left: 15px;
+    cursor: pointer;
+    border: solid 1px #ccc;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.arquivos a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+}
+
+.arquivos, button{
+    background-color: #DBB9DC;
+    border-radius: 10px;
+}
