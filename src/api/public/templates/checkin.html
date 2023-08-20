@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSpace - Check-in</title>
+    <link rel="stylesheet" href="../css/style-checkin.css">
+    <link rel="stylesheet" href="../css/pop-up.css">
+</head>
+<body>
+    <div class="grid-container">
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="logo" width="100px" height="100px">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home"> <img src="../img/home.svg"> Home</a></li>
+                <li><a href="dogs"> <img src="../img/dogs.svg"> Dogs</a></li>
+                <li><a href="relatorios"> <img src="../img/relatorios.svg"> Relatórios</a></li>
+                <li><a href="financeiro"> <img src="../img/financeiro.svg"> Financeiro</a></li>
+                <li><a href="configuracoes"> <img src="../img/configuracoes.svg"> Configurações</a></li>
+                <li class="sair"><a href="login"> <img src="../img/sair.svg"> Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="container-principal">
+            <div class="tittle">
+                <ul><a href="/"><h1><img src="../img/arrow.svg"></a>Check-in e Check-out</h1></ul>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="https://blog.polipet.com.br/wp-content/uploads/2023/01/Cao-445x445.jpeg">
+                    <p>Brock Santos</p>
+                    <h3>Entrada prevista: 08:00hrs</h3>
+                    <h3>Saída prevista: 19:00hrs</h3>
+                    <button class="btn-checkin">Check-in</button>
+                    <button class="btn-checkout">Check-out</button>
+                </div>
+                <div class="card-add">
+                    <button class="btn-add">
+                        
+                            <img src="../img/func/cadastrar.svg">
+                            <p>Adicionar</p>
+                       
+                    </button>
+                </div>
+                <div class="modal-container">
+                    <div class="modal">
+                        <p class="tittle-modal">Check-in</p>
+                        <p class="subtittle-modal">*todos os campos são obrigatórios</p>
+                        <input type="text" placeholder="Nome do dog">
+                        <input type="text" placeholder="Hora de entrada">
+                        <input type="text" placeholder="Hora de saída">
+                        <button class="btn-modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../scripts/pop-up.js"></script>
+</body>
+</html>

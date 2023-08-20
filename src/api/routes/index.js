@@ -18,6 +18,7 @@ const registroDiario = require('./paginaRegistroRoute');
 const home = require('./paginaHomeRoute');
 const perfil = require('./paginaPerfilRoute');
 const construcao = require('./paginaEmConstrucaoRoute');
+const checkinpage = require('./paginaCheckinRoute');
 
 module.exports = app => {
     app.use(session({
@@ -45,5 +46,6 @@ module.exports = app => {
         home,
         perfil,
         construcao,
+        checkinpage
     );
 }
