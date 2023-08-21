@@ -8,7 +8,7 @@ class FuncionarioController {
    static async pegaTodosOsFuncionarios(req, res) {
         try {
             const todosOsFuncionarios = await database.Funcionarios.findAll();
-            return res.status(200).json(todosOsPets);
+            return res.status(200).json(todosOsFuncionarios);
       } catch (error) {
             return res.status(500).json(error.message);
         }

@@ -7,8 +7,6 @@ const funcionarios = require('./funcionarioRoute');
 const checkins = require('./checkinRoute');
 const registros = require('./registroRoute');
 const tutores = require('./tutoresRoute');
-const session = require('express-session');
-const passport = require('passport');
 
 //rotas das paginas
 
@@ -21,22 +19,10 @@ const construcao = require('./paginaEmConstrucaoRoute');
 const checkinpage = require('./paginaCheckinRoute');
 
 module.exports = app => {
-    app.use(session({
-        secret: 'keyboard cat',
-        resave: false,
-        saveUninitialized: true
-    }));
-      
-    app.use(passport.initialize());
-    app.use(passport.session());
-      
-    app.use(bodyParser.urlencoded({ extended: true }));
-
     app.use(bodyParser.json());
     app.use(
         pets,
         donos,
-        funcionarios,
         checkins,
         registros,
         tutores,
@@ -46,6 +32,9 @@ module.exports = app => {
         home,
         perfil,
         construcao,
-        checkinpage
+        checkinpage,
+        funcionarios
     );
+
+    
 }

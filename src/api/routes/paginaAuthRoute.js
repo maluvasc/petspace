@@ -1,7 +1,7 @@
 const express = require("express");
 const { Router } = require("express");
 const path = require("path");
-const passport = require("passport");
+const AuthController = require("../controllers/authController");
 
 const router = Router();
 
@@ -11,10 +11,6 @@ router.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public','templates','index.html'));
 });
 
-router.post('/login', 
-  passport.authenticate('local', { failureRedirect: '/login' }),
-  function(req, res) {
-    res.redirect('/');
-  });
+router.post('/auth/login', AuthController.login);
 
 module.exports = router;

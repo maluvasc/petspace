@@ -94,6 +94,7 @@
     "is-promise": "^2.2.2",
     "js-beautify": "^1.14.9",
     "jsonfile": "^6.1.0",
+    "jsonwebtoken": "^9.0.1",
     "lodash": "^4.17.21",
     "lru-cache": "^6.0.0",
     "lru-queue": "^0.1.0",

@@ -10,12 +10,12 @@ router.get('/cadastro', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public','templates','cadastro-pet.html'));
   });
 
-router.get('/dog-cadastro', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public','templates','cadastro-pet.html'));
+router.get('/cadastro/2', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public','templates','page2.html'));
   });
 
-router.get('/tutor-cadastro', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public','templates','cadastro-tutor.html'));
+router.get('/cadastro/3', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public','templates','page3.html'));
   });
 
 module.exports = router;

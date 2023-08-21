@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/page3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cadastro do Pet</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="../img/logo.svg" alt="logo" width="100px" height="100px">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/"> <img src="../img/home.svg"> Home</a></li>
+            <li><a href="dogs"> <img src="../img/dogs.svg"> Dogs</a></li>
+            <li><a href="relatorios"> <img src="../img/relatorios.svg"> Relatórios</a></li>
+            <li><a href="financeiro"> <img src="../img/financeiro.svg"> Financeiro</a></li>
+            <li><a href="configuracoes"> <img src="../img/configuracoes.svg"> Configurações</a></li>
+            <li class="sair"><a href="login"> <img src="../img/sair.svg"> Sair</a></li>
+        </ul>
+    </nav>
+        <div class="form">
+            <form action="#">
+                <div class="link-cadastro">
+                    <a href="/" class="voltar">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+                            <g id="&#240;&#159;&#166;&#134; icon &#34;arrow left&#34;">
+                            <path id="Vector" d="M26 14H2" stroke="#003153" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_2" d="M14 26L2 14L14 2" stroke="#003153" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="link">
+                        <h3>Cadastro</h3>
+                    </div>
+                </div>
+
+                <div class="form-header">
+                    <h2>Informações sobre o tutor</h2>
+                    <p>Campos com * são obrigatórios</p>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome*</label>
+                            <input type="text" id="name" placeholder="Nome do tutor" required> 
+                        </div>
+                        <div class="input-box">
+                            <label for="raça">CPF*</label>
+                            <input type="text" id="cpf" placeholder="123.456.678-90" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group2">
+                        
+                        <div class="input-box">
+                            <label>Cidade*</label>
+                            <input type="text" id="cidade" placeholder="Cidade" required>
+                        </div>
+                        <div class="input-box">
+                            <label>Bairro*</label>
+                            <input type="text" id="bairro" placeholder="Bairro" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="peso">Endereço*</label>
+                            <input type="text" id="endereco" placeholder="Endereço" required>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="input-group3">
+                        <div class="input-box">
+                            <label>E-mail*</label>
+                            <input type="email" id="email" placeholder="nome@mail.com" required>
+                        </div>
+                        <div class="input-box">
+                        <label>Telefone principal para contato*</label>
+                        <input type="tel" id="telefone" placeholder="(__)9XXXX-XXXX" required>        
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome do tutor secundário</label>
+                            <input type="text" id="name" placeholder="Tutor secundário" > 
+                        </div>
+                        <div class="input-box">
+                            <label for="raça">CPF do tutor secundário</label>
+                            <input type="text" id="cpf" placeholder="123.456.678-90" >
+                        </div>
+                    </div>
+
+                    <div class="input-group3">
+                        <div class="input-box">
+                            <label>E-mail </label>
+                            <input type="email" id="email" placeholder="nome@mail.com" >
+                        </div>
+                        <div class="input-box">
+                        <label>Telefone para contato secundário</label>
+                        <input type="tel" id="telefone" placeholder="(__)9XXXX-XXXX" >        
+                        </div>
+                    </div>
+
+                    
+                <div class="continuar-button top-right">
+                    <button type="button"><a href="/">Finalizar</a></button>
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+</body>
