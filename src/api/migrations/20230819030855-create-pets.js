@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       datanasc: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       raca: {
         type: Sequelize.STRING

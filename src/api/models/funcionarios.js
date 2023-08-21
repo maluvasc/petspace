@@ -21,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Funcionarios',
+    defaultScope: {
+      attributes: { exclude: ['senha'] },
+    },
   });
   return Funcionarios;
 };

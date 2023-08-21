@@ -1,4 +1,6 @@
 const database = require('../models');
+const FuncionarioService = require('../services/funcionarioService');
+const funcionarioService = new FuncionarioService();
 
 //CRUD para funcionários
 
@@ -22,13 +24,13 @@ class FuncionarioController {
              return res.status(500).json(error.message);
         }
      }
-     static async criaFuncionario(req, res) {
-        const novoFuncionario = req.body;
+     static async cadastrar(req, res) {
+        const { nome,cpf,login,senha } = req.body;
         try {
-            const funcionario = await database.Funcionarios.create(novoFuncionario);
-            return res.status(200).json(funcionario);
+            const funcionario = await funcionarioService.cadastrar({ nome,cpf,login,senha });
+            res.status(201).send(funcionario);
         } catch (error) {
-            return res.status(500).json(error.message);
+            res.status(500).send(error.message);
         }
      }
      static async atualizaFuncionario(req, res) {
