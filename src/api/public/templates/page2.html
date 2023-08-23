@@ -74,7 +74,7 @@
                                 <p>Apresenta alguma doença?</p>
                                 <p class="asterisco">*Preencha apenas se possuir</p>
                             </div>
-                            <input type="text" class="placeholder" id="doença",placeholder="  Detalhes sobre as doenças">
+                            <input type="text" class="placeholder" id="doenca",placeholder="  Detalhes sobre as doenças">
 
                         </div>
                         
@@ -87,20 +87,19 @@
                                 <p>Faz uso de medicações?</p>
                                 <p class="asterisco">*Preencha apenas se fizer uso </p>
                             </div>
-                            <input type="text" class="placeholder" id="medicações" placeholder="  Detalhes sobre as medicações">
+                            <input type="text" class="placeholder" id="medicacao" placeholder="  Detalhes sobre as medicações">
                         </div>
                     </div>
                 </div>
                 <div class="continuar-button top-right">
-                    <button type="button"><a href="/cadastro/3">Continuar</a></button>
+                    <button type="button" id="continuar-button">Continuar</button>
                 </div>
             </form>
         </div>
         <script>
-            function updatePet(id, vacinado, vermifugado, alergia, doenca, medicacao) {
+            function updatePet(vacinado, vermifugado, alergia, doenca, medicacao) {
 
             let data = {
-                id: id,
                 vacinado: vacinado,
                 vermifugado: vermifugado,
                 alergia: alergia,
@@ -108,7 +107,10 @@
                 medicacao: medicacao,
             };
 
-            fetch('http://localhost:3000/api/pets/${id}', {
+            const urlParams = new URLSearchParams(window.location.search);
+            const idUrl = urlParams.get('id');
+
+            fetch(`http://localhost:3000/api/pets/${idUrl}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -129,16 +131,13 @@
             const vermifugado = document.getElementById("vermifugacao").value;
             const alergia = document.getElementById("alergia").value;
             const doenca = document.getElementById("doenca").value;
-            const medicacao = document.getElementById("medicação").value;
-            const id = 22;
-
+            const medicacao = document.getElementById("medicacao").value;
 
                     // Chamar a função createPet com os valores dos campos
                     updatePet(vacinado, vermifugado, alergia, doenca, medicacao);
                 });
             });
 
-        
 </script>
     </div>
 </body>

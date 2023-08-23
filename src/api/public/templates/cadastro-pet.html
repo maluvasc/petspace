@@ -107,8 +107,8 @@
                     </div> 
                 </div>
                 <div class="continuar-button top-right">
-                    <button id="continuar-button" type="button">Continuar</button>
-                </div>                       
+                    <button type="button" id="continuar-button">Continuar</button>
+                </div>                                  
             </form>
         </div>
         <script>
@@ -133,7 +133,10 @@
                 headers: {"Content-type": "application/json; charset=UTF-8"}
             })
             .then(response => response.json()) 
-            .then(json => console.log(json))
+            .then(json => { const newPetId = json.id;
+                console.log(json);
+                window.location.href = `/cadastro/2?id=${newPetId}`;
+            })
             .catch(err => console.log(err));
             }
 
@@ -154,6 +157,18 @@
             const cor = document.getElementById("cor").value;
             const porte = document.getElementById("porte").value;
             const dono_id = 1; // Defina o ID do dono conforme necessário
+
+//             document.addEventListener("DOMContentLoaded", function() {
+//             const continuarButton = document.getElementById("continuar-button");
+//             continuarButton.addEventListener("click", function() {
+//                 // Capturar o ID gerado na página anterior (substitua pelo valor real)
+//                 const id = 123; // Substitua pelo ID real gerado
+//                  // Redirecionar para a próxima página com o ID como parâmetro na URL
+//             window.location.href = `/cadastro/2?id=${id}`;
+            
+
+//     });
+// });
 
 
                     // Chamar a função createPet com os valores dos campos
