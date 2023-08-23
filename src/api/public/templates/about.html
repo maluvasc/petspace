@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sobre Nós</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Example</title>
 </head>
 <body>
-  <h1>Sobre Nós</h1>
-  <p>Esta é a página que fala um pouco sobre nós.</p>
+    <h1>Lista de Pets</h1>
+    <ul id="userList"></ul>
+
+    <script>
+
+        const userList = document.getElementById('userList');
+
+         fetch('http://localhost:3000/api/pets')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then(data => {
+              console.log(data);
+                data.forEach(user => {
+                    const li = document.createElement('li');
+                    userList.appendChild(li);
+                    li.textContent = user.nome;
+                });
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+    </script>
 </body>
 </html>
+

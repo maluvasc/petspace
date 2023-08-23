@@ -113,6 +113,47 @@
                 
             </form>
         </div>
+        <script>
+            function createDono(id, vacinado, vermifugado, alergia, doenca, medicacao) {
 
+            let data = {
+                id: id,
+                vacinado: vacinado,
+                vermifugado: vermifugado,
+                alergia: alergia,
+                doenca: doenca,
+                medicacao: medicacao,
+            };
+
+            fetch('http://localhost:3000/api/pets/${id}', {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                // Capturar o botão de continuar pelo ID
+                const continuarButton = document.getElementById("continuar-button");
+
+                 // Adicionar um evento de clique ao botão
+        continuarButton.addEventListener("click", function() {
+            // Capturar os valores dos campos do formulário
+            const vacinado = document.getElementById("vacina").value;
+            const vermifugado = document.getElementById("vermifugacao").value;
+            const alergia = document.getElementById("alergia").value;
+            const doenca = document.getElementById("doenca").value;
+            const medicacao = document.getElementById("medicação").value;
+            const id = 22;
+
+
+                    // Chamar a função createPet com os valores dos campos
+                    updatePet(vacinado, vermifugado, alergia, doenca, medicacao);
+                });
+            });
+            </script>
     </div>
 </body>

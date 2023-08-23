@@ -54,7 +54,7 @@
                     <div class="input-group2">
                         <div class="input-box">
                             <label for="raça">Raça</label>
-                            <input type="text" name="raça" placeholder="Raça do dog" required>
+                            <input type="text" name="raça" id="raça" placeholder="Raça do dog" required>
                         </div>
                         <div class="input-box">
                             <label>Sexo</label>
@@ -70,11 +70,11 @@
                     <div class="input-group3">
                         <div class="input-box">
                             <label>Idade</label>
-                            <input type="text" name="idade" placeholder="Idade do dog">
+                            <input type="text" name="idade" id="idade" placeholder="Idade do dog">
                         </div>
                         <div class="input-box">
                             <label for="peso">Peso</label>
-                            <input type="text" name="peso" placeholder="Peso do dog" required>
+                            <input type="text" name="peso" id="peso" placeholder="Peso do dog" required>
                         </div>
                         <div class="input-box">
                             <label>Castrado</label>
@@ -89,7 +89,7 @@
                     <div class="input-group4">
                         <div class="input-box">
                             <label>Data de nascimento</label>
-                            <input type="date" name="nascimento" required>
+                            <input type="date" name="nascimento" id="datanasc" required>
                         </div>
                         <div class="input-box">
                             <label for="cor"><strong>Cor</strong></label>
@@ -107,10 +107,59 @@
                     </div> 
                 </div>
                 <div class="continuar-button top-right">
-                    <button type="button"><a href="cadastro/2">Continuar</a></button>
-                </div>
+                    <button id="continuar-button" type="button">Continuar</button>
+                </div>                       
             </form>
         </div>
+        <script>
+            function createPet(nome, raca, sexo, idade, datanasc,peso, castrado, cor, porte, dono_id) {
 
+            let data = {
+                nome: nome,
+                raca : raca,
+                sexo: sexo,
+                idade: idade,
+                datanasc: datanasc,
+                peso: peso,
+                castrado: castrado,
+                cor: cor,
+                porte: porte,
+                dono_id: dono_id
+            };
+
+            fetch('http://localhost:3000/api/pets', {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                // Capturar o botão de continuar pelo ID
+                const continuarButton = document.getElementById("continuar-button");
+
+                 // Adicionar um evento de clique ao botão
+        continuarButton.addEventListener("click", function() {
+            // Capturar os valores dos campos do formulário
+            const nome = document.getElementById("name").value;
+            const raca = document.getElementById("raça").value;
+            const sexo = document.getElementById("sexo").value;
+            const idade = document.getElementById("idade").value;
+            const datanasc = document.getElementById("datanasc").value;
+            const peso = document.getElementById("peso").value;
+            const castrado = document.getElementById("castrado").value;
+            const cor = document.getElementById("cor").value;
+            const porte = document.getElementById("porte").value;
+            const dono_id = 1; // Defina o ID do dono conforme necessário
+
+
+                    // Chamar a função createPet com os valores dos campos
+                    createPet(nome, raca, sexo, idade, datanasc, peso, castrado, cor, porte, dono_id);
+                });
+            });
+</script>
     </div>
 </body>
