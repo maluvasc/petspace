@@ -64,7 +64,7 @@
                                 <p>Apresenta alguma alergia?</p>
                                 <p class="asterisco">*Preencha apenas se possuir</p>
                             </div>
-                            <input type="text" class="placeholder" placeholder="  Detalhes sobre as alergias">
+                            <input type="text" class="placeholder" id="alergia" placeholder="  Detalhes sobre as alergias">
                         </div>
 
                 
@@ -74,7 +74,7 @@
                                 <p>Apresenta alguma doença?</p>
                                 <p class="asterisco">*Preencha apenas se possuir</p>
                             </div>
-                            <input type="text" class="placeholder" placeholder="  Detalhes sobre as doenças">
+                            <input type="text" class="placeholder" id="doença",placeholder="  Detalhes sobre as doenças">
 
                         </div>
                         
@@ -87,7 +87,7 @@
                                 <p>Faz uso de medicações?</p>
                                 <p class="asterisco">*Preencha apenas se fizer uso </p>
                             </div>
-                            <input type="text" class="placeholder" placeholder="  Detalhes sobre as medicações">
+                            <input type="text" class="placeholder" id="medicações" placeholder="  Detalhes sobre as medicações">
                         </div>
                     </div>
                 </div>
@@ -96,6 +96,49 @@
                 </div>
             </form>
         </div>
+        <script>
+            function updatePet(id, vacinado, vermifugado, alergia, doenca, medicacao) {
 
+            let data = {
+                id: id,
+                vacinado: vacinado,
+                vermifugado: vermifugado,
+                alergia: alergia,
+                doenca: doenca,
+                medicacao: medicacao,
+            };
+
+            fetch('http://localhost:3000/api/pets/${id}', {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                // Capturar o botão de continuar pelo ID
+                const continuarButton = document.getElementById("continuar-button");
+
+                 // Adicionar um evento de clique ao botão
+        continuarButton.addEventListener("click", function() {
+            // Capturar os valores dos campos do formulário
+            const vacinado = document.getElementById("vacina").value;
+            const vermifugado = document.getElementById("vermifugacao").value;
+            const alergia = document.getElementById("alergia").value;
+            const doenca = document.getElementById("doenca").value;
+            const medicacao = document.getElementById("medicação").value;
+            const id = 22;
+
+
+                    // Chamar a função createPet com os valores dos campos
+                    updatePet(vacinado, vermifugado, alergia, doenca, medicacao);
+                });
+            });
+
+        
+</script>
     </div>
 </body>

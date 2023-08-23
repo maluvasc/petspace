@@ -37,11 +37,11 @@
 
             <div class="container-dogs">
                 <p>Dogs do Dia</p>
-                <button class="dog-dia"><a href="#"><img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg?w=710&h=474"> Brock Santos</a></button>
-                <button class="dog-dia"><a href="#"><img src="https://blog.polipet.com.br/wp-content/uploads/2023/01/Cao-445x445.jpeg"> Brock Santos</a></button>
-                <button class="dog-dia"><a href="#"><img src="https://www.fatosdesconhecidos.com.br/wp-content/uploads/2021/12/caramelo-03-647x450.jpg"> Brock Santos</a></button>
-                <button class="dog-dia"><a href="#"><img src="https://www.petlove.com.br/images/breeds/193223/profile/original/golden_retriever-p.jpg?1532539102"> Brock Santos</a></button>
-                <button class="dog-dia"><a href="#"><img src="https://images.jota.info/wp-content/uploads/2023/04/pexels-rk-jajoria-1189673.jpg"> Brock Santos</a></button>
+                <button class="dog-dia"><a href="#"><img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg?w=710&h=474"><span></span></a></button>
+                <button class="dog-dia"><a href="#"><img src="https://blog.polipet.com.br/wp-content/uploads/2023/01/Cao-445x445.jpeg"><span></span></a></button>
+                <button class="dog-dia"><a href="#"><img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg"><span></span></a></button>
+                <button class="dog-dia"><a href="#"><img src="https://blog.polipet.com.br/wp-content/uploads/2023/01/Cao-445x445.jpeg"><span></span></a></button>
+                <button class="dog-dia"><a href="#"><img src="https://images.jota.info/wp-content/uploads/2023/04/pexels-rk-jajoria-1189673.jpg"><span></span></a></button>
             </div>
 
             <div class="container-arquivos">
@@ -54,5 +54,29 @@
         </main>
     
     </div>
+    <script>
+        const userList = document.getElementById('userList');
+
+         fetch('http://localhost:3000/api/pets')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then(data => {
+                data.forEach(user => {
+                    const nomes = document.querySelectorAll('span');
+                    i = 0;
+                    nomes.forEach(nome => {
+                        nome.innerHTML = data[i].nome;
+                        i++;
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+    </script>
 </body>
 </html>
