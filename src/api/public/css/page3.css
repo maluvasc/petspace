@@ -3,11 +3,10 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    
   }
   
   body {
-    
+    overflow: hidden;
     display: flex;
     background-color: #f4efef;
     color: #003153;
@@ -74,22 +73,20 @@
     margin-top: 9rem;
   }
   
-  
   .form {
       width: 100%;
       max-width: 1000px;
-      padding: 0 2rem;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #f4efef;
-      margin-left: 15%;
+      margin-left: 12%;
   }
   
   .link-cadastro {
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
   }
