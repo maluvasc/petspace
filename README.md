@@ -25,7 +25,7 @@ O PetSpace oferece um conjunto de funcionalidades para simplificar o dia a dia d
 
 ## Requisitos do Sistema ⚙️
 
-Verifique se o seu sistema atende aos seguintes requisitos:
+Verifique se o seu sistema possui os seguintes requisitos:
 
 - 📦 Node.js
 - 🗃️ MySQL
@@ -36,13 +36,13 @@ Verifique se o seu sistema atende aos seguintes requisitos:
 
 Fale com nossa equipe dedicada de desenvolvedores para obter suporte e esclarecimentos:
 
-- Kailane Cassimiro: 
-- Letícia Gomes: 
-- Maria Luiza: 
-- Mateus Abdias: 
+- Kailane Cassimiro: kailane.cassimiro@ufrpe.br
+- Letícia Gomes: leticia.gomess@ufrpe.br
+- Maria Luiza: marialuisa.vasconcelos@ufrpe.br
+- Mateus Abdias: mateus.abdias@ufrpe.br
 ## Vídeo da Apresentação Geral do Sistema 🎥
 
-Assista à nossa apresentação detalhada do PetSpace 
+Assista a apresentação detalhada do PetSpace: https://youtu.be/vDWwcWG-UQ0?feature=shared
 
 ## Protótipo Navegável 🖱️
 
