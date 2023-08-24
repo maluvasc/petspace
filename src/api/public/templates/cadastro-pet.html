@@ -107,12 +107,15 @@
                     </div> 
                 </div>
                 <div class="continuar-button top-right">
-                    <button type="button" id="continuar-button">Continuar</button>
+                    <button type="button"><a id="continuar-button">Continuar</a></button>
                 </div>                                  
             </form>
         </div>
         <script>
-            function createPet(nome, raca, sexo, idade, datanasc,peso, castrado, cor, porte, dono_id) {
+            function createPet(nome, raca, sexo, idade, datanasc, peso, castrado, cor, porte, dono_id) {
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const idUrl = urlParams.get('dono_id');
 
             let data = {
                 nome: nome,
@@ -124,7 +127,7 @@
                 castrado: castrado,
                 cor: cor,
                 porte: porte,
-                dono_id: dono_id
+                dono_id: idUrl
             };
 
             fetch('http://localhost:3000/api/pets', {
@@ -132,47 +135,32 @@
                 body: JSON.stringify(data),
                 headers: {"Content-type": "application/json; charset=UTF-8"}
             })
-            .then(response => response.json()) 
-            .then(json => { const newPetId = json.id;
+            .then(response => response.json())
+            .then(json => { 
+                const newPetId = json.id;
                 console.log(json);
-                window.location.href = `/cadastro/2?id=${newPetId}`;
+                window.location.href = `/cadastro/3?id=${newPetId}`;
             })
             .catch(err => console.log(err));
             }
 
             document.addEventListener("DOMContentLoaded", function() {
-                // Capturar o botão de continuar pelo ID
                 const continuarButton = document.getElementById("continuar-button");
 
-                 // Adicionar um evento de clique ao botão
-        continuarButton.addEventListener("click", function() {
-            // Capturar os valores dos campos do formulário
-            const nome = document.getElementById("name").value;
-            const raca = document.getElementById("raça").value;
-            const sexo = document.getElementById("sexo").value;
-            const idade = document.getElementById("idade").value;
-            const datanasc = document.getElementById("datanasc").value;
-            const peso = document.getElementById("peso").value;
-            const castrado = document.getElementById("castrado").value;
-            const cor = document.getElementById("cor").value;
-            const porte = document.getElementById("porte").value;
-            const dono_id = 1; // Defina o ID do dono conforme necessário
+            console.log(continuarButton)
 
-//             document.addEventListener("DOMContentLoaded", function() {
-//             const continuarButton = document.getElementById("continuar-button");
-//             continuarButton.addEventListener("click", function() {
-//                 // Capturar o ID gerado na página anterior (substitua pelo valor real)
-//                 const id = 123; // Substitua pelo ID real gerado
-//                  // Redirecionar para a próxima página com o ID como parâmetro na URL
-//             window.location.href = `/cadastro/2?id=${id}`;
-            
+            continuarButton.addEventListener("click", function() {
+                const nome = document.getElementById("name").value;
+                const raca = document.getElementById("raça").value;
+                const sexo = document.getElementById("sexo").value;
+                const idade = document.getElementById("idade").value;
+                const datanasc = document.getElementById("datanasc").value;
+                const peso = document.getElementById("peso").value;
+                const castrado = document.getElementById("castrado").value;
+                const cor = document.getElementById("cor").value;
+                const porte = document.getElementById("porte").value;
 
-//     });
-// });
-
-
-                    // Chamar a função createPet com os valores dos campos
-                    createPet(nome, raca, sexo, idade, datanasc, peso, castrado, cor, porte, dono_id);
+                createPet(nome, raca, sexo, idade, datanasc, peso, castrado, cor, porte);
                 });
             });
 </script>

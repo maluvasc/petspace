@@ -6,8 +6,8 @@ const router = Router();
 
 router.use(express.static(path.join(__dirname, '..', 'public')));
 
-router.get('/404', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public','templates','em-construcao.html'));
+router.get('/construcao', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public','templates','construcao.html'));
   });
 
 module.exports = router;

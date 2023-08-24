@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class="continuar-button top-right">
-                    <button type="button" id="continuar-button">Continuar</button>
+                    <button type="button" id="continuar-button">Finalizar</button>
                 </div>
             </form>
         </div>
@@ -116,27 +116,24 @@
                 headers: {"Content-type": "application/json; charset=UTF-8"}
             })
             .then(response => response.json()) 
-            .then(json => console.log(json))
+            .then(json => { console.log(json);
+                window.location.href = `/`;})
             .catch(err => console.log(err));
             }
 
             document.addEventListener("DOMContentLoaded", function() {
-                // Capturar o botão de continuar pelo ID
                 const continuarButton = document.getElementById("continuar-button");
 
-                 // Adicionar um evento de clique ao botão
-        continuarButton.addEventListener("click", function() {
-            // Capturar os valores dos campos do formulário
-            const vacinado = document.getElementById("vacina").value;
-            const vermifugado = document.getElementById("vermifugacao").value;
-            const alergia = document.getElementById("alergia").value;
-            const doenca = document.getElementById("doenca").value;
-            const medicacao = document.getElementById("medicacao").value;
+            continuarButton.addEventListener("click", function() {
+                const vacinado = document.getElementById("vacina").value;
+                const vermifugado = document.getElementById("vermifugacao").value;
+                const alergia = document.getElementById("alergia").value;
+                const doenca = document.getElementById("doenca").value;
+                const medicacao = document.getElementById("medicacao").value;
 
-                    // Chamar a função createPet com os valores dos campos
-                    updatePet(vacinado, vermifugado, alergia, doenca, medicacao);
+                updatePet(vacinado, vermifugado, alergia, doenca, medicacao);
+                    });
                 });
-            });
 
 </script>
     </div>
