@@ -1,6 +1,6 @@
 const database = require('../models');
 
-//CRUD para checkin
+//CRUD para checkin e checkout
 
 class CheckInController {
    static async pegaTodosOsCheckIns(req, res) {

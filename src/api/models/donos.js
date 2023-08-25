@@ -1,3 +1,6 @@
+// criação do modelo de Donos
+// donos tem varios pets, mas pets só tem um dono
+
 'use strict';
 const {
   Model

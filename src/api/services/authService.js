@@ -1,3 +1,8 @@
+//serviço de autenticação do login
+//o login é feito com o login e senha do funcionário que são checadas no banco de dados
+//também é gerado um token de autenticação que é usado para acessar as rotas que precisam de autenticação
+
+
 const database = require('../models');
 const { compare } = require('bcrypt');
 const { sign } = require('jsonwebtoken'); 

@@ -1,3 +1,6 @@
+// Criação do modelo de registro diário do pet
+// Registro diário tem um pet, mas pet tem varios registros diários
+
 'use strict';
 const {
   Model

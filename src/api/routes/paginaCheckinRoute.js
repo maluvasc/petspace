@@ -1,3 +1,5 @@
+//liga o checkin/out ao seu respectivo html e css
+
 const express = require("express");
 const { Router } = require("express");
 const path = require("path");

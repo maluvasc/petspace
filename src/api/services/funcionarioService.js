@@ -1,3 +1,5 @@
+//serviço de cadastro de funcionário pois precisa de encriptação de senha e de id único
+
 const database = require('../models');
 const { hash } = require('bcryptjs');
 const uuid = require('uuid');

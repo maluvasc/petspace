@@ -1,3 +1,5 @@
+//o sequelize, ORM que usamos, fez automaticamente!
+
 'use strict';
 
 const fs = require('fs');

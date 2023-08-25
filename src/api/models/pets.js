@@ -1,3 +1,8 @@
+// Criação do modelo de Pets
+// Pets tem um dono, mas donos tem varios pets
+// Pets tem varios checkins, mas checkins só tem um pet
+// Pets tem varios registros diarios, mas registros diarios só tem um pet
+
 'use strict';
 const {
   Model

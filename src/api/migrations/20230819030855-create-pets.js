@@ -1,3 +1,5 @@
+//atributos da tabela pets no banco de dados
+
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

@@ -1,3 +1,5 @@
+//controller para autenticação de funcionários
+
 const AuthService = require('../services/authService');
 const authService = new AuthService();
 

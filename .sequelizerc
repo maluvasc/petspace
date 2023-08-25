@@ -1,4 +1,4 @@
-
+//atualizando paths dos arquivos de configuração do sequelize para ele funcionar normalmente
 const path = require('path');
 
 module.exports = {

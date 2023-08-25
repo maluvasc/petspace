@@ -112,6 +112,12 @@
             </form>
         </div>
         <script>
+
+            //html do cadastro pet
+            //essa função foi criada para pegar os dados do pet e enviar para o banco de dados
+            //um pouco de gambiarra pois o único método que conseguimos para mandar o dono id
+            //foi ter essa informação na url e pegar ela com o urlParams
+            
             function createPet(nome, raca, sexo, idade, datanasc, peso, castrado, cor, porte, dono_id) {
 
             const urlParams = new URLSearchParams(window.location.search);

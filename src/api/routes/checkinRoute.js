@@ -1,3 +1,5 @@
+//rotas de checkin
+
 const { Router } = require("express");
 const CheckInController = require("../controllers/CheckInController.js");
 

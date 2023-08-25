@@ -1,3 +1,6 @@
+// Arquivo responsável pelo modelo do tutor secundário
+// Tutor secundário tem um dono, e donos tem um tutor secundário cadastrado
+
 'use strict';
 const {
   Model

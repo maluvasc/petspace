@@ -1,3 +1,8 @@
+//Gera um token único para cada usuário, que é usado para autenticar o usuário em cada requisição
+//Não é necessário passar o token em todas as requisições, apenas nas que necessitam de autenticação
+//O token é gerado no login e é válido por 1 dia
+//Não conseguimos fazer funcionar pois o token é gerado mas nunca validado no headers
+
 const { verify, decode } = require('jsonwebtoken');
 const jsonSecret = require('../config/jsonSecret');
 

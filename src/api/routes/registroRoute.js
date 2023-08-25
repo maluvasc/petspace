@@ -1,3 +1,5 @@
+//rotas registro diário
+
 const { Router } = require("express");
 const RegistroController = require("../controllers/RegistroController.js");
 

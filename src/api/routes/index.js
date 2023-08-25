@@ -18,6 +18,8 @@ const perfil = require('./paginaPerfilRoute');
 const construcao = require('./paginaEmConstrucaoRoute');
 const checkinpage = require('./paginaCheckinRoute');
 
+//intermédiário para as rotas para não encher o server.js de rotas
+
 module.exports = app => {
     app.use(bodyParser.json());
     app.use(

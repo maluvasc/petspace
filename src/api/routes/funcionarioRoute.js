@@ -1,3 +1,5 @@
+//rotas de funcionario
+
 const { Router } = require("express");
 const FuncionarioController = require("../controllers/FuncionarioController.js");
 

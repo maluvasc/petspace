@@ -1,3 +1,7 @@
+//a ideia seria mandar para o front o nome e a foto do pet, para que o front possa montar a pagina home
+//esquecemos de colocar imagem como um atributo do pet, mas iriamos fazer com hábito de monta que era uma ideia
+//original não implementada
+
 const database = require("../models");
 const homeResponse = require("../mappers/paginaHomeMapper");
 const Sequelize = require("sequelize");

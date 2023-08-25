@@ -1,3 +1,5 @@
+//validação de requisitos para login
+
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const Funcionarios = require("../models/funcionarios");
